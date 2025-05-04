@@ -1,4 +1,4 @@
-package src.creational;
+package src.creational.singleton;
 
 public class DBConfig {
 
