@@ -1,15 +1,9 @@
 package src.structral.adapter;
 
 public class ModernClassImpl implements ModernClass {
-    private final LegacyClass legacyClass;
-
-    public ModernClassImpl(LegacyClass legacyClass) {
-        this.legacyClass = legacyClass;
-    }
 
     @Override
-    public JsonModel getData() {
-        XmlModel dataFromLegacyService = legacyClass.getDataFromLegacyService();
+    public JsonModel getData(XmlModel dataFromLegacyService) {
         return this.convertToJson(dataFromLegacyService);
     }
 
